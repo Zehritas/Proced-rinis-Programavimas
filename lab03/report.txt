@@ -1,0 +1,120 @@
+QUERY1
+28
+Sarah Kesting
+Sole Leben
+Adam Damon
+...
+
+QUERY2
+877
+Victor Note
+Kylie Quarry
+Debora King
+...
+
+QUERY3
+813
+Victor Note
+Jamie Kesting
+Kylie Quarry
+...
+
+QUERY4
+494
+Victor Note
+Kylie Quarry
+Jamie Sleight
+...
+
+QUERY5
+244
+Victor Note
+Debora King
+Debora Doe
+...
+
+QUERY6
+576
+Victor Note
+Debora King
+Jamie Sleight
+...
+
+QUERY7
+172
+Jane Lockwood
+Jessie King
+Sole Lockwood
+...
+
+QUERY8
+70
+Angelina Thornton
+Jerry Doe
+Jerry Enderman
+...
+
+QUERY9
+245
+Kylie Quarry
+Debora Doe
+Sole Enderman
+...
+
+QUERY10
+241
+Kylie Quarry
+Debora King
+Jamie Sleight
+...
+
+QUERY11
+558
+Victor Note
+Kylie Quarry
+Debora King
+...
+
+QUERY12
+50
+Jerry Doe
+Kylie Stapleton
+Jane Smith
+...
+
+QUERY13
+48
+Sole Leben
+Alex Sleight
+Victor Quarry
+...
+
+QUERY14
+999
+Victor Note
+Jamie Kesting
+Kylie Quarry
+...
+
+QUERY15
+68
+Jessie King
+Wilhelm Perry
+Melissa Wood
+...
+
+QUERY16
+365
+Kylie Quarry
+Debora King
+Jamie Note
+...
+
+QUERY17
+333
+Kylie Quarry
+Debora King
+Jamie Note
+
+QUERY18
+0
