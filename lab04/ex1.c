@@ -1,31 +1,49 @@
 #include <stdio.h>
-
+#include <math.h>
 int main()
 {
-  int a, b, c, sprendNumb;
-  printf("Iveskite 3 skaicius: \n");
-  scanf("%d %d %d", &a, &b, &c);
-  printf("%d %d %d\n", a, b, c);
-
-  if (((b*b)-(4*a*c)) > 0)
+  //variables
+  int a, b, c;
+  float d;
+  //input
+  printf("This program calculates the number of quadratic equations roots and their values!\n");
+  printf("Input 3 whole numbers : a, b, c. These will be the numerical coefficients of the quadratic equation.\n");
+  //foolproof
+  while (scanf("%d %d %d", &a, &b, &c) != 3 || (getchar() != '\n'))
   {
-    sprendNumb = 2;
-  }
-  else if (((b*b)-(4*a*c)) == 0)
-  {
-    sprendNumb = 1;
+    printf("Please input whole numbers!\n");
+    while(getchar() != '\n')
+    {
+
+    }
+
   }
 
+  d = ((b*b)-(4*a*c));
+
+  //When discriminant is > 0
+  if (d > 0)
+  {
+    printf("Quadratic equation has 2 roots!\n");
+    float x1, x2;
+    x1 = ((-b)+sqrt(d))/(2*a);
+    x2 = ((-b)-sqrt(d))/(2*a);
+    printf("x1: %f    x2: %f", x1, x2);
+
+  }
+
+  //When discriminant is 0
+  else if (d == 0)
+  {
+    printf("Quadratic equation has 1 root!\n");
+    float x;
+    x = (-b)/(2*a);
+    printf("x: %f", x);
+  }
+  //When discriminant < 0
   else
   {
-    sprendNumb = 0;
+    printf("Quadratic equation has no roots!\n");
   }
 
-  printf("diskriminanto sprendiniu yra %d\n", sprendNumb);
-  printf("diskriminanto reiksmes ");
-
-  for (int i = 0; i < sprendNumb; i++)
-  {
-    ;
-  }
 }
