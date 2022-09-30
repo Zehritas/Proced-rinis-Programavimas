@@ -5,7 +5,7 @@ int main()
   //variables
   int a, b, c, fc;
   //input
-  printf("This program takes three not negative whole numbers\na, b, c, it then outputs c-th member of the fibonacci sequence.\n");
+  printf("This program takes three not negative whole numbers\na, b, c, it then outputs c-th member of fc = f(c-1) + f(c-2) sequence.\n");
   printf("Input 3 whole numbers : a, b, c.\n");
 
   //foolproof
