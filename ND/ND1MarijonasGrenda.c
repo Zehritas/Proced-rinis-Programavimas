@@ -1,20 +1,23 @@
-//Dokumentacija liko
+//This program was made by Marijonas Grenda
+//This file contains a C program, which takes input (whole numbers)
+//And outputs the quantity of uneven sums of the entered numbers
 #include <stdio.h>
+#include <stdlib.h>
 
 int main ()
 {
   //variables
   int answerNumber = 0;
-  int number = 1;
-  int tmp, numberSum;
+  long long int number = 1;
+  long long int tmp, numberSum;
   //input
   printf("This program takes sequences of whole numbers and calculates the sum of its digits,\n");
-  printf("output of the program is the quantity of uneven sums!\n");
+  printf("output of the program is the quantity of uneven sums! To end the sequence enter 0.\n");
   printf("Input the number sequence:\n");
   while (number != 0)
   {
-    //foolproof   (liko int length suziureti)
-    while (scanf("%d", &number) != 1 || (getchar() != '\n'))
+    //foolproof 
+    while (scanf("%lld", &number) != 1 || (getchar() != '\n'))
     {
         printf("Only whole numbers allowed!\n");
         while(getchar() != '\n')
@@ -24,7 +27,7 @@ int main ()
     }
 
     //set up variables for math
-    tmp = number;
+    tmp = abs(number);
     numberSum = 0;
 
     //main algorithms
