@@ -1,0 +1,9 @@
+lab05_ex1  Time to line expectancy: 40/h	Actual time:	Lines:
+	More information:
+
+
+
+
+
+lab05_ex2  Time to line expectancy: 40/h	Actual time:	Lines:
+	More information:
