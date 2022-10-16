@@ -1,0 +1,1 @@
+Middle number in terms of value is: 500
