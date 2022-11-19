@@ -26,5 +26,5 @@ int getPositiveNumber(char *msg)
 
   }
 
-  return 1;
+  return input;
 }

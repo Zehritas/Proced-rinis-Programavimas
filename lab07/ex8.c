@@ -12,9 +12,12 @@ int medianOfThree(int array[], int low, int high);
 //low - starting index
 int main()
 {
-  int array[CAPACITY], low = 0, high, number, counter = 0;
+  int array[CAPACITY], low = 0, high, number, counter = -1;
+  printf("This program sorts the entered array. Enter the numbers (only whole numbers are supported).\n");
+  printf("To end the input enter a 0!\n");
   while (number != 0)
   {
+    counter++;
     //foolproof(validation)
     while (scanf("%lld", &number) != 1 || (getchar() != '\n'))
     {
@@ -27,12 +30,18 @@ int main()
 
     if (number != 0)
     {
+      // printf("%d ", number);
       array[counter] = number;
-      ++counter;
     }
 
   }
-  high = counter - 1;
+  printf("%d", counter);
+  high = counter;
+  for (int i = 0; i < high; ++i)
+  {
+    printf("%d ", array[i]);
+  }
+  printf("\n%d %d\n", low, high);
 
   // Runner ///////////////////
   quickSort(array, low, high);
@@ -44,16 +53,18 @@ int main()
   printf("\n%d %d", low, high);
 }
 
-//////////////////////////////////////////////////////////////////////////////
-//                              THE                                         //
-//                                FUNCTIONS                                 //
-//                                        XD                                //
+
 //////////////////////////////////////////////////////////////////////////////
 
-//                            NUMBER 1: The main quickSort                  //
+//                           The main quickSort                             //
 void quickSort(int array[], int low, int high)
 {
-  if (low < high)
+  if (high - low < 3)
+  {
+    medianOfThree(array, low, high);
+  }
+  
+  else if (low < high)
   {
     int pivot_index = partition(array, low, high);
     quickSort(array, low, pivot_index); //Left of the array
@@ -61,7 +72,7 @@ void quickSort(int array[], int low, int high)
   }
 }
 
-//                            NUMBER 2: The partition for quickSort         //
+//                            The partition for quickSort                    //
 int partition(int array[], int low, int high)
 {
     int pivot_index = medianOfThree(array, low, high), i = low, j = high;
@@ -92,12 +103,12 @@ int partition(int array[], int low, int high)
 
 }
 
-//                            NUMBER 3: The pivot for partition             //
+//                            The pivot for partition                         //
 int medianOfThree(int array[], int low, int high)
 {
   int a = array[low], b = array[((high + low) / 2)], c = array[high], temp;
-  array[low] = min(min(a,b), c);
-  array[high] = max(max(a,b), c);
+  array[low] = min(min(a,b), c);    //define min(a,b) ((a)<(b)?(a):(b))   These two are needed at the top
+  array[high] = max(max(a,b), c);   //#define max(a,b) ((a)>(b)?(a):(b))
   array[((high + low) / 2)] = a + b + c - array[low] - array[high];
   temp = array[((high + low) / 2)];
   array[((high + low) / 2)] = array[high - 1];
@@ -105,13 +116,3 @@ int medianOfThree(int array[], int low, int high)
   return high - 1;
 }
 ////////////////////////////////////////////////////////////////////////////////
-//                                                                            //
-//                                 ~THE END~                                  //
-//                                                                            //
-////////////////////////////////////////////////////////////////////////////////
-
-/*for (int i = 0; i <= high; ++i)
-{
-  printf("%d ", array[i]);
-}
-printf("\n%d %d", low, high);*/
